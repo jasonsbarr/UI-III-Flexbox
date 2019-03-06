@@ -194,34 +194,31 @@ h6 {
 }
 
 [class^="col-"] {
-	margin: -0.5rem;
 	padding: 1rem;
 }
 
-/* In the real world there would probably be gutters */
-
 .col-1 {
-	width: calc(100% / 6);
+	width: calc((100% / 6) - .5rem);
 }
 
 .col-2 {
-	width: calc((100% / 6) * 2);
+	width: calc(((100% / 6) * 2) - .5rem);
 }
 
 .col-3 {
-	width: 50%;
+	width: calc(50% - .5rem);
 }
 
 .col-4 {
-	width: calc((100% / 6) * 4);
+	width: calc(((100% / 6) * 4) - .5rem);
 }
 
 .col-5 {
-	width: calc((100% / 6) * 5);
+	width: calc(((100% / 6) * 5) - .5rem);
 }
 
 .col-6 {
-	width: 100%;
+	width: calc(100% - .5rem);
 }
 
 /**
@@ -349,13 +346,34 @@ button:hover {
 	white-space: pre-line;
 }
 
-.cta-button {
+button {
+	border-radius: 5px;
 	padding: 1rem 3rem;
 }
 
-.cta-button:hover {
+.cta-button {
+	border-radius: 0;
+}
+
+.cta-button:hover,
+.learn-more:hover {
 	background: #000000;
 	color: #ffffff;
+}
+
+/**
+ * Content header styles
+ */
+.services-header-img {
+	width: 100%;
+}
+
+.content-header {
+	font-size: 1.2rem;
+}
+
+.content-header .main-heading {
+	font-size: 2rem;
 }
 
 /**
@@ -364,22 +382,69 @@ button:hover {
 main {
 	border-top: 1px solid black;
 	border-bottom: 1px solid black;
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 }
 
-main .row+.row {
-	margin-top: 1.5rem;
+main .row + .row {
+	margin-top: 3rem;
 }
 
 .blurb h2 {
 	font-size: 1.5rem;
 }
 
+.feature-box {
+	background-color: #f3f3f3;
+	border: solid 1px #000000;
+	padding: 1.5rem;
+}
+
+.feature-box + .feature-box {
+	margin-left: 2rem;
+}
+
+.feature-box p {
+	margin-bottom: 1rem;
+}
+
 .middle-img {
 	display: block;
 	margin: auto;
 	width: 100%;
+}
+
+/**
+ * Content-closing styles
+ */
+.content-closing {
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 2rem 0;
+}
+
+.content-closing .blurb {
+	padding: 0;
+}
+
+.content-closing p {
+	margin-bottom: 1.5rem;
+}
+
+.fact {
+	font-size: 1.2rem;
+	list-style: square;
+	list-style-position: inside;
+}
+
+.fact li + li {
+	margin-top: 0.8rem;
+}
+
+.services-info-img {
+	float: right;
 }
 
 /**
