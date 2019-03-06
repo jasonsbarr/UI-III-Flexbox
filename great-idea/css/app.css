@@ -190,7 +190,7 @@ h6 {
 	display: flex;
 	justify-content: space-between;
 	margin: 0;
-	padding: 0;
+	padding: 1rem;
 }
 
 [class^="col-"] {
@@ -227,6 +227,10 @@ h6 {
  */
 html {
 	font-size: 100%;
+}
+
+body {
+	font-size: 1.2rem;
 }
 
 header,
@@ -368,10 +372,6 @@ button {
 	width: 100%;
 }
 
-.content-header {
-	font-size: 1.2rem;
-}
-
 .content-header .main-heading {
 	font-size: 2rem;
 }
@@ -416,6 +416,10 @@ main .row + .row {
 	width: 100%;
 }
 
+.img-center {
+	text-align: center;
+}
+
 /**
  * Content-closing styles
  */
@@ -444,7 +448,7 @@ main .row + .row {
 }
 
 .services-info-img {
-	float: right;
+	width: 100%;
 }
 
 /**
@@ -463,9 +467,17 @@ main .row + .row {
 	text-align: center;
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1100px) {
 	html {
-		font-size: 85%;
+		font-size: 90%;
+	}
+
+	header,
+	main,
+	footer,
+	section,
+	.row {
+		padding: 1.5rem;
 	}
 
 	#page-header,
@@ -513,7 +525,7 @@ main .row + .row {
 		font-size: 70%
 	}
 
-	.blurb {
+	body {
 		font-size: 1.5rem;
 	}
 
@@ -660,12 +672,35 @@ main .row + .row {
 		margin: 2rem;
 		padding: 2rem 1rem;
 	}
+	
+	.row,
+	.row + .row,
+	main .row,
+	main .row + .row {
+		margin: 0;
+		padding: 0;
+	}
+	
+	.row {
+		flex-wrap: wrap;
+	}
 
 	[class^="col-"] {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		width: 100%;
+	}
+
+	.blurb {
+		display: block;
+		width: 100%;
+	}
+
+	.feature-box,
+	.feature-box + .feature-box {
+		margin-top: 1.5rem;
+		margin: 1.5rem;
 	}
 
 	.blurb h2 {
@@ -676,6 +711,15 @@ main .row + .row {
 	.blurb address {
 		margin: 0 auto;
 		width: fit-content;
+	}
+
+	.content-closing .blurb {
+		margin: 1.5rem;
+		padding: 1.5rem;
+	}
+
+	.services-info-img {
+		width: unset;
 	}
 
 	.legal-info small {
