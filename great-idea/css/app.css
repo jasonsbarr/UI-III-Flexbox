@@ -543,6 +543,7 @@ main .row + .row {
 	}
 
 	.nav-list {
+		display: block;
 		left: 50%;
 		max-width: 15rem;
 		position: relative;
